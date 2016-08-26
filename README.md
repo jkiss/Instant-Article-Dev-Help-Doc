@@ -121,7 +121,7 @@ switch(coverType){
   </content:encoded>
 </item>
 ```
-详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/publishing/setup-rss-feed/?locale=en_US)
+详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/publishing/setup-rss-feed?locale=zh_CN)
 
 二、**&lt;content:encoded&gt;** 标签里的静态页内容：
 ```html
@@ -221,4 +221,8 @@ switch(coverType){
   </body>
 </html>
 ```
-所有元素详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/reference)
+所有元素详情可以参考 [官方文档](https://developers.facebook.com/docs/instant-articles/reference)
+
+旧的 CMS 系统生成的 RSS 文件可以 [参考这里](http://rss.cctvnews.cn/cctvnews.rss)，生成更新规则：
+1. 只抓取普通新闻；
+2. 每次抓取最新的 **100** 篇文章，每隔 **30分钟** 更新一次 RSS
