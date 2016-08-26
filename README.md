@@ -1,11 +1,11 @@
 # Instant-Article-Dev-Help-Doc
 
-关于开发 Instant Articles 相关的数据结构和示例文件
+关于开发 Instant Articles 相关的数据结构和示例文件，或直接参考[官方文档](https://developers.facebook.com/docs/instant-articles?locale=zh_CN)
 
-### Original-Article-Content-Type.js：
+## Original-Article-Content-Type.js：
 这个文件主要包含了两部分内容：
 
-一是根据CMS发布的文章所包含的内容总结出的内容类型，主要包含：正文小标题、正文段落、来源引用、单张图片、幻灯片、视频和地图:
+一、根据 CMS 发布的文章所包含的内容总结出的内容类型，主要包含：正文小标题、正文段落、来源引用、单张图片、幻灯片、视频和地图:
 
 ```javascript
 switch(contentType){
@@ -23,7 +23,7 @@ switch(coverType){
 }
 ```
 
-二是前端从 *contentString* 分解出来的数据类型:
+二、前端从 *contentString* 分解出来的数据类型:
 
 ```javascript
 {
@@ -101,3 +101,124 @@ switch(coverType){
   ]
 }
 ```
+
+## Instant-Article-RSS-example.rss
+根据咱们文章所包含的内容类型，这个文件包含了一个完整的需要生成的RSS文件所需要的所有元素（是官方元素的一个子集），其中，每一个 **<item>** 包含一篇文章，**<item>** 主要分为两部分：
+
+一、7 个标签：
+```xml
+<item>
+  <title>This is an Instant Article</title>
+  <link>http://example.com/article.html</link>
+  <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+  <pubDate>2014-12-11T04:44:16Z</pubDate>
+  <author>CCTVNEWS</author>
+  <description>This is my first Instant Article. How awesome is this?</description>
+  <content:encoded>
+    <![CDATA[
+      **以 CDATA 包裹的HTML内容（这部分内容由当前文章的JSON数据结构结合 Instant Articles 指定的HTML5标签重新生成得到）**
+    ]]>
+  </content:encoded>
+</item>
+```
+详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/publishing/setup-rss-feed/?locale=en_US)
+
+二、**<content:encoded>** 标签里的静态页内容：
+```html
+<!doctype html>
+<html lang="en" prefix="op: http://media.facebook.com/op#">
+  <head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="当前文章静态页地址">
+    <meta property="op:markup_version" content="v1.0">
+  </head>
+  <body>
+    <article>
+      <header>
+        <!-- Article Header Goes Here: -->
+        <!-- if 封面是视频： -->
+        <figure class="fb-feed-cover">
+          <video>
+              <source src="http://videos.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/83eac0be-5564-454a-b446-962faab0ee51.mp4" type="video/mp4" />
+          </video>
+        </figure>
+        <!-- elseif 封面是图片： -->
+        <figure>
+          <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869220/ad5be653-5f4e-4969-afb7-0e0d22334ab4.jpg" />
+        </figure>
+        <!-- endif -->
+        <h1>China's next-generation carrier rocket on way to launch site</h1>
+        <address>
+          <a rel="facebook" href="https://www.facebook.com/cctvnewschina">CCTVNEWS</a>
+        </address>
+        <time class="op-published" datetime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+        <time class="op-modified" dateTime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+        <!-- End Article Header -->
+      </header>
+      <!-- Article Body Goes Here: -->
+      <h1>正文内小标题</h1>
+      <p>正文内段落</p>
+      <aside>
+        引用的内容
+        <cite>source</cite>
+      </aside>
+      <!-- 单张图片 -->
+      <figure data-feedback="fb:likes,fb:comments">
+        <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/1d793e93-b22b-4783-adb5-32ec024f4dfe.jpg" />
+        <figcaption>Caption</figcaption>
+      </figure>
+      <!-- 轮播幻灯片 -->
+      <figure class="op-slideshow">
+        <figure data-feedback="fb:likes,fb:comments">
+            <img src="http://fb.me/ia-img-townhouses.jpg"/>
+            <figcaption class="op-vertical-bottom">
+              This caption becomes visible once you enter the slideshow by tapping the first image.
+            </figcaption>
+         </figure>
+          
+        <figure data-feedback="fb:likes,fb:comments">
+          <img src="http://fb.me/ia-img-grafitti.jpg" />
+          <figcaption class="op-vertical-bottom">
+            Each photo in a slideshow can have its own caption.
+          </figcaption>
+        </figure>
+      </figure>
+      <!-- 视频 -->
+      <figure data-feedback="fb:likes, fb:comments">
+        <img src="http://fb.me/ia-img-video_frame.jpg" /> 
+        <video controls>
+          <source src="http://fb.me/ia-video-fb_ia_product_video.mov" />
+        </video>
+      </figure>
+      <!-- 地图 -->
+      <figure class="op-map">
+        <script type="application/json" class="op-geotag">
+          {
+            "type": "Feature",
+            "geometry":
+              {
+                "type": "Point",
+                "coordinates": [ 40.730852, -73.991364 ]
+              },
+            "properties":
+              {
+                "radius": 100000,
+                "pivot": true
+              }
+          }
+        </script>
+      </figure>
+      <!-- End Article Body -->
+      <footer>
+        <!-- Article Footer Goes Here: -->
+        <aside>
+          Official account for CCTV NEWS, the English language news channel of China Central Television (CCTV), the nation's largest national broadcasting network.
+        </aside>
+        <small>© CCTVNEWS</small>
+        <!-- End Article Footer -->
+      </footer>
+    </article>
+  </body>
+</html>
+```
+所有元素详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/reference)
