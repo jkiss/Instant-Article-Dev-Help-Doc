@@ -123,7 +123,7 @@ switch(coverType){
 ```
 详情可以参考[官方文档](https://developers.facebook.com/docs/instant-articles/publishing/setup-rss-feed/?locale=en_US)
 
-二、**<content:encoded>** 标签里的静态页内容：
+二、**&lt;content:encoded&gt;** 标签里的静态页内容：
 ```html
 <!doctype html>
 <html lang="en" prefix="op: http://media.facebook.com/op#">
