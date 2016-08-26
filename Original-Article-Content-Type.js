@@ -14,7 +14,7 @@ switch(coverType){
 }
 
 {
-  data:{
+  header:{
     // cover是图片
     coverType: 1,
     imgUrl: '',
