@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?><rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>CCTVNEWS</title>
+    <link>http://www.cctvnews.cn/</link>
+    <description>
+      Read our awesome news, every day.
+    </description>
+    <language>en-us</language>
+    <lastBuildDate>2014-12-11T04:44:16Z</lastBuildDate>
+    <item>
+      <title>This is an Instant Article</title>
+      <link>http://example.com/article.html</link>
+      <guid>2fd4e1c67a2d28fced849ee1bb76e7391b93eb12</guid>
+      <pubDate>2014-12-11T04:44:16Z</pubDate>
+      <author>CCTVNEWS</author>
+      <description>This is my first Instant Article. How awesome is this?</description>
+      <content:encoded>
+        <![CDATA[
+          <!doctype html>
+          <html lang="en" prefix="op: http://media.facebook.com/op#">
+            <head>
+              <meta charset="utf-8">
+              <link rel="canonical" href="当前文章静态页地址">
+              <meta property="op:markup_version" content="v1.0">
+            </head>
+            <body>
+              <article>
+                <header>
+                  <!-- Article Header Goes Here: -->
+
+                  <!-- if 封面是视频： -->
+                  <figure class="fb-feed-cover">
+                    <video>
+                        <source src="http://videos.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/83eac0be-5564-454a-b446-962faab0ee51.mp4" type="video/mp4" />
+                    </video>
+                  </figure>
+                  <!-- elseif 封面是图片： -->
+                  <figure>
+                    <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869220/ad5be653-5f4e-4969-afb7-0e0d22334ab4.jpg" />
+                  </figure>
+                  <!-- endif -->
+
+                  <h1>China's next-generation carrier rocket on way to launch site</h1>
+                  <address>
+                    <a rel="facebook" href="https://www.facebook.com/cctvnewschina">CCTVNEWS</a>
+                  </address>
+                  <time class="op-published" datetime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+                  <time class="op-modified" dateTime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+                  <!-- End Article Header -->
+                </header>
+
+                <!-- Article Body Goes Here: -->
+                <h1>正文内小标题</h1>
+
+                <p>正文内段落</p>
+
+                <aside>
+                  引用的内容
+                  <cite>source</cite>
+                </aside>
+
+                <!-- 单张图片 -->
+                <figure data-feedback="fb:likes,fb:comments">
+                  <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/1d793e93-b22b-4783-adb5-32ec024f4dfe.jpg" />
+                  <figcaption>Caption</figcaption>
+                </figure>
+
+                <!-- 轮播幻灯片 -->
+                <figure class="op-slideshow">
+                  <figure data-feedback="fb:likes,fb:comments">
+                      <img src="http://fb.me/ia-img-townhouses.jpg"/>
+                      <figcaption class="op-vertical-bottom">
+                        This caption becomes visible once you enter the slideshow by tapping the first image.
+                      </figcaption>
+                   </figure>
+                    
+                  <figure data-feedback="fb:likes,fb:comments">
+                    <img src="http://fb.me/ia-img-grafitti.jpg" />
+                    <figcaption class="op-vertical-bottom">
+                      Each photo in a slideshow can have its own caption.
+                    </figcaption>
+                  </figure>
+                </figure>
+
+                <!-- 视频 -->
+                <figure data-feedback="fb:likes, fb:comments">
+                  <img src="http://fb.me/ia-img-video_frame.jpg" /> 
+                  <video controls>
+                    <source src="http://fb.me/ia-video-fb_ia_product_video.mov" />
+                  </video>
+                </figure>
+
+                <!-- 地图 -->
+                <figure class="op-map">
+                  <script type="application/json" class="op-geotag">
+                    {
+                      "type": "Feature",
+                      "geometry":
+                        {
+                          "type": "Point",
+                          "coordinates": [ 40.730852, -73.991364 ]
+                        },
+                      "properties":
+                        {
+                          "radius": 100000,
+                          "pivot": true
+                        }
+                    }
+                  </script>
+                </figure>
+                <!-- End Article Body -->
+
+                <footer>
+                  <!-- Article Footer Goes Here: -->
+                  <aside>
+                    Official account for CCTV NEWS, the English language news channel of China Central Television (CCTV), the nation's largest national broadcasting network.
+                  </aside>
+                  <small>© CCTVNEWS</small>
+                  <!-- End Article Footer -->
+                </footer>
+              </article>
+            </body>
+          </html>
+        ]]>
+      </content:encoded>
+    </item>
+    <item>
+      ...
+    </item>
+    <item>
+      ...
+    </item>
+    <item>
+      ...
+    </item>
+  </channel>
+</rss>
