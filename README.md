@@ -1,6 +1,6 @@
 # Instant-Article-Dev-Help-Doc
 
-关于开发 Instant Articles 相关的数据结构和示例文件，或直接参考[官方文档](https://developers.facebook.com/docs/instant-articles?locale=zh_CN)
+关于开发 Instant Articles 相关的数据结构和示例文件，或直接参考 [官方文档](https://developers.facebook.com/docs/instant-articles?locale=zh_CN)
 
 ## Original-Article-Content-Type.js：
 这个文件主要包含了两部分内容：
