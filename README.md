@@ -103,7 +103,7 @@ switch(coverType){
 ```
 
 ## Instant-Article-RSS-example.rss
-根据咱们文章所包含的内容类型，这个文件包含了一个完整的需要生成的RSS文件所需要的所有元素（是官方元素的一个子集），其中，每一个 **<item>** 包含一篇文章，**<item>** 主要分为两部分：
+根据咱们文章所包含的内容类型，这个文件包含了一个完整的需要生成的RSS文件所需要的所有元素（是官方元素的一个子集），其中，每一个 **<item>** 包含一篇文章，*<item>* 主要分为两部分：
 
 一、7 个标签：
 ```xml
@@ -116,7 +116,7 @@ switch(coverType){
   <description>This is my first Instant Article. How awesome is this?</description>
   <content:encoded>
     <![CDATA[
-      **以 CDATA 包裹的HTML内容（这部分内容由当前文章的JSON数据结构结合 Instant Articles 指定的HTML5标签重新生成得到）**
+      *以 CDATA 包裹的HTML内容（这部分内容由当前文章的JSON数据结构结合 Instant Articles 指定的HTML5标签重新生成得到）*
     ]]>
   </content:encoded>
 </item>
