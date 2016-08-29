@@ -27,7 +27,8 @@ switch(coverType){
     link: 'shareUrl',
     description: '摘要',
     pubDate: '发布时间',
-    author: ''
+    author: '',
+    section: ''
   },
   detail: [
     { // 正文段落
