@@ -148,12 +148,24 @@ switch(coverType){
           <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869220/ad5be653-5f4e-4969-afb7-0e0d22334ab4.jpg" />
         </figure>
         <!-- endif -->
+        
+        <!-- Title -->
         <h1>China's next-generation carrier rocket on way to launch site</h1>
+        
+        <!-- A article's section -->
+        <h3 class="op-kicker">
+          Introduction
+        </h3>
+        
+        <!-- The author of your article -->
         <address>
           <a rel="facebook" href="https://www.facebook.com/cctvnewschina">CCTVNEWS</a>
         </address>
+        
+        <!-- The published and last modified time stamps -->
         <time class="op-published" datetime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
         <time class="op-modified" dateTime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+        
         <!-- End Article Header -->
       </header>
       <!-- Article Body Goes Here: -->
