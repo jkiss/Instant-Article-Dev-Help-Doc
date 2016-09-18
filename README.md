@@ -96,6 +96,7 @@ switch(coverType){
     { // 地图
       contentType: 7,
       geometry: {
+        // x: lat, y: lng [经度，纬度]
         coordinates: [x, y]
       }
     }
