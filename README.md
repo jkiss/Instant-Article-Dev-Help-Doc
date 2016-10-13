@@ -235,7 +235,7 @@ switch(coverType){
             ga('create', 'UA-66998167-4', 'auto');
             ga('send', {
               'hitType': 'pageview',
-              'page': 'This is my first Instant Article. How awesome is this?'
+              'title': 'This is my first Instant Article. How awesome is this?'
             });
           </script>
         </iframe>
