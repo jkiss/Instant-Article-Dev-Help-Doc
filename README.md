@@ -232,11 +232,20 @@ switch(coverType){
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-66998167-4', 'auto');
+            ga('create', 'UA-83877958-2', 'auto');
             ga('send', {
-              'hitType': 'pageview',
-              'title': 'This is my first Instant Article. How awesome is this?'
-            });
+                hitType: 'pageview',
+                page: "/fb/instant_article/"+id,  // id需要抓取
+                title: title,                     // title需要抓取
+                dimension1: id                    // id需要抓取
+            })
+            ga('send', {
+                hitType: 'event',
+                eventCategory: "news_from_all_platform",
+                eventAction: "read_fb_instant_article",
+                eventLabel: title,                // title需要抓取
+                dimension1: id                    // id需要抓取
+            })
           </script>
         </iframe>
       </figure>
