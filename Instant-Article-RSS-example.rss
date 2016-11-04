@@ -17,137 +17,139 @@
       <content:encoded>
         <![CDATA[
           <!doctype html>
-          <html lang="en" prefix="op: http://media.facebook.com/op#">
-            <head>
-              <meta charset="utf-8">
-              <link rel="canonical" href="当前文章静态页地址">
-              <meta property="op:markup_version" content="v1.0">
-            </head>
-            <body>
-              <article>
-                <header>
-                  <!-- Article Header Goes Here: -->
+            <html lang="en" prefix="op: http://media.facebook.com/op#">
+              <head>
+                <meta charset="utf-8">
+                <link rel="canonical" href="当前文章静态页地址">
+                <meta property="op:markup_version" content="v1.0">
+              </head>
+              <body>
+                <article>
+                  <header>
+                    <!-- Article Header Goes Here: -->
+                    <!-- if 封面是视频： -->
+                    <figure class="fb-feed-cover">
+                      <video>
+                          <source src="http://videos.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/83eac0be-5564-454a-b446-962faab0ee51.mp4" type="video/mp4" />
+                      </video>
+                    </figure>
+                    <!-- elseif 封面是图片： -->
+                    <figure>
+                      <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869220/ad5be653-5f4e-4969-afb7-0e0d22334ab4.jpg" />
+                    </figure>
+                    <!-- endif -->
 
-                  <!-- if 封面是视频： -->
-                  <figure class="fb-feed-cover">
-                    <video>
-                        <source src="http://videos.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/83eac0be-5564-454a-b446-962faab0ee51.mp4" type="video/mp4" />
-                    </video>
-                  </figure>
-                  <!-- elseif 封面是图片： -->
-                  <figure>
-                    <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869220/ad5be653-5f4e-4969-afb7-0e0d22334ab4.jpg" />
-                  </figure>
-                  <!-- endif -->
+                    <!-- Title -->
+                    <h1>China's next-generation carrier rocket on way to launch site</h1>
 
-                  <!-- Title -->
-                  <h1>China's next-generation carrier rocket on way to launch site</h1>
-                  
-                  <!-- A article's section -->
-                  <h3 class="op-kicker">
-                    Introduction
-                  </h3>
-                  
-                  <!-- The author of your article -->
-                  <address>
-                    <a rel="facebook" href="https://www.facebook.com/cctvnewschina">CCTVNEWS</a>
-                  </address>
-                  
-                  <!-- The published and last modified time stamps -->
-                  <time class="op-published" datetime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
-                  <time class="op-modified" dateTime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
-                  
-                  <!-- End Article Header -->
-                </header>
+                    <!-- A article's section -->
+                    <h3 class="op-kicker">
+                      Introduction
+                    </h3>
 
-                <!-- Article Body Goes Here: -->
-                <h1>正文内小标题</h1>
+                    <!-- The author of your article -->
+                    <address>
+                      <a rel="facebook" href="https://www.facebook.com/cctvnewschina">CCTVNEWS</a>
+                    </address>
 
-                <p>正文内段落</p>
+                    <!-- The published and last modified time stamps -->
+                    <time class="op-published" datetime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
+                    <time class="op-modified" dateTime="2016-08-26T06:17:20Z">2016-08-26T06:17:20Z</time>
 
-                <aside>
-                  引用的内容
-                  <cite>source</cite>
-                </aside>
-
-                <!-- 单张图片 -->
-                <figure data-feedback="fb:likes,fb:comments">
-                  <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/1d793e93-b22b-4783-adb5-32ec024f4dfe.jpg" />
-                  <figcaption>Caption</figcaption>
-                </figure>
-
-                <!-- 轮播幻灯片 -->
-                <figure class="op-slideshow">
-                  <figure data-feedback="fb:likes,fb:comments">
-                      <img src="http://fb.me/ia-img-townhouses.jpg"/>
-                      <figcaption class="op-vertical-bottom">
-                        This caption becomes visible once you enter the slideshow by tapping the first image.
-                      </figcaption>
-                   </figure>
-                    
-                  <figure data-feedback="fb:likes,fb:comments">
-                    <img src="http://fb.me/ia-img-grafitti.jpg" />
-                    <figcaption class="op-vertical-bottom">
-                      Each photo in a slideshow can have its own caption.
-                    </figcaption>
-                  </figure>
-                </figure>
-
-                <!-- 视频 -->
-                <figure data-feedback="fb:likes, fb:comments">
-                  <img src="http://fb.me/ia-img-video_frame.jpg" /> 
-                  <video controls>
-                    <source src="http://fb.me/ia-video-fb_ia_product_video.mov" />
-                  </video>
-                </figure>
-
-                <!-- 地图 -->
-                <figure class="op-map">
-                  <script type="application/json" class="op-geotag">
-                    {
-                      "type": "Feature",
-                      "geometry":
-                        {
-                          "type": "Point",
-                          "coordinates": [ 40.730852, -73.991364 ]
-                        },
-                      "properties":
-                        {
-                          "radius": 100000,
-                          "pivot": true
-                        }
-                    }
-                  </script>
-                </figure>
-                <!-- End Article Body -->
-                <!-- GA -->
-                <figure class="op-tracker">
-                  <iframe>
-                    <script>
-                      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-                      ga('create', 'UA-66998167-4', 'auto');
-                      ga('send', {
-                        'hitType': 'pageview',
-                        'title': 'This is my first Instant Article. How awesome is this?'
-                      });
-                    </script>
-                  </iframe>
-                </figure>
-                <footer>
-                  <!-- Article Footer Goes Here: -->
+                    <!-- End Article Header -->
+                  </header>
+                  <!-- Article Body Goes Here: -->
+                  <h1>正文内小标题</h1>
+                  <p>正文内段落</p>
                   <aside>
-                    Official account for CCTV NEWS, the English language news channel of China Central Television (CCTV), the nation's largest national broadcasting network.
-                  </aside>
-                  <small>© CCTVNEWS</small>
-                  <!-- End Article Footer -->
-                </footer>
-              </article>
-            </body>
-          </html>
+        引用的内容
+        <cite>source</cite>
+      </aside>
+      <!-- 单张图片 -->
+      <figure data-feedback="fb:likes,fb:comments">
+        <img src="http://www.cctvnews.cn/publish/website/data/data/2016/08/26/1869145/1d793e93-b22b-4783-adb5-32ec024f4dfe.jpg" />
+        <figcaption>Caption</figcaption>
+      </figure>
+      <!-- 轮播幻灯片 -->
+      <figure class="op-slideshow">
+        <figure data-feedback="fb:likes,fb:comments">
+            <img src="http://fb.me/ia-img-townhouses.jpg"/>
+            <figcaption class="op-vertical-bottom">
+              This caption becomes visible once you enter the slideshow by tapping the first image.
+            </figcaption>
+         </figure>
+          
+        <figure data-feedback="fb:likes,fb:comments">
+          <img src="http://fb.me/ia-img-grafitti.jpg" />
+          <figcaption class="op-vertical-bottom">
+            Each photo in a slideshow can have its own caption.
+          </figcaption>
+        </figure>
+      </figure>
+      <!-- 视频 -->
+      <figure data-feedback="fb:likes, fb:comments">
+        <img src="http://fb.me/ia-img-video_frame.jpg" /> 
+        <video controls>
+          <source src="http://fb.me/ia-video-fb_ia_product_video.mov" />
+        </video>
+      </figure>
+      <!-- 地图 -->
+      <figure class="op-map">
+        <script type="application/json" class="op-geotag">
+          {
+            "type": "Feature",
+            "geometry":
+              {
+                "type": "Point",
+                "coordinates": [ 40.730852, -73.991364 ]
+              },
+            "properties":
+              {
+                "radius": 100000,
+                "pivot": true
+              }
+          }
+        </script>
+      </figure>
+      <!-- End Article Body -->
+      <!-- GA -->
+      <figure class="op-tracker">
+        <iframe>
+          <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-83877958-2', 'auto');
+            ga('send', {
+                hitType: 'pageview',
+                page: "/fb/instant_article/"+id,  // id需要抓取
+                title: title,                     // title需要抓取
+                dimension1: id                    // id需要抓取
+            })
+            ga('send', {
+                hitType: 'event',
+                eventCategory: "news_from_all_platform",
+                eventAction: "read_fb_instant_article",
+                eventLabel: title,                // title需要抓取
+                dimension1: id                    // id需要抓取
+            })
+          </script>
+        </iframe>
+      </figure>
+      <!-- Footer -->
+      <footer>
+        <!-- Article Footer Goes Here: -->
+        <aside>
+          Official account for CCTV NEWS, the English language news channel of China Central Television (CCTV), the nation's largest national broadcasting network.
+        </aside>
+        <small>© CCTVNEWS</small>
+        <!-- End Article Footer -->
+      </footer>
+    </article>
+  </body>
+</html>
         ]]>
       </content:encoded>
     </item>
